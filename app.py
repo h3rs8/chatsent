@@ -55,7 +55,7 @@ if uploaded_file is not None:
                 fig = analyze.plotchart(sizes, labels, colors)
                 st.write("Most Active Person: "+str(dfa.groupby('users', as_index=False).count().sort_values("pos", axis =0, ascending=False).iloc[0]["users"])+", Messages: "+str(dfa.groupby('users', as_index=False).count().sort_values("pos", axis =0, ascending=False).iloc[0]["pos"]))
                 st.pyplot(fig)
-                st.dataframe(dfa)
+                #st.dataframe(dfa)
 
             elif typ == 'Individual':
                 st.header("Select a name from the list to analyze individually")
@@ -72,7 +72,7 @@ if uploaded_file is not None:
                 fig = analyze.plotchart(sizes, labels, colors)
                 st.pyplot(fig)
 
-                st.dataframe(dfg[dfg['users'] == nam])
+                #st.dataframe(dfg[dfg['users'] == nam])
 
 
 
@@ -95,4 +95,4 @@ if uploaded_file is not None:
 
                     fig = analyze.plotchart(sizes, labels , colors)
                     st.pyplot(fig)
-                    st.dataframe(usr_sentiments)
+                    #st.dataframe(usr_sentiments)
