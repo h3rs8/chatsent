@@ -1,6 +1,7 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import numpy as np
 import matplotlib.pyplot as plt
+nltk.download('vader_lexicon')
 
 
 def sentify(df):
